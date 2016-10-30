@@ -1,5 +1,6 @@
-const numberOfTrs = $('#searchResult > tbody > tr').length;
-let numberOfTrsHidden = 0;
+// - 1 because the navigation is a tr as well
+const numberOfSearchResults = $('#searchResult > tbody > tr').length - 1;
+let numberOfSearchResultsHidden = 0;
 
 $('#searchResult > tbody > tr').each((index, el) => {
 	const $tr = $(el);
@@ -13,10 +14,10 @@ $('#searchResult > tbody > tr').each((index, el) => {
 		}
 	});
 
-	if (!trusted && index < numberOfTrs) {
+	if (!trusted && index < numberOfSearchResults) {
 		$tr.hide();
-		numberOfTrsHidden++;
+		numberOfSearchResultsHidden++;
 	}
 });
 
-console.log(`Removed ${numberOfTrsHidden} untrustworthy torrents.`);
+console.log(`Removed ${numberOfSearchResultsHidden} untrustworthy torrents.`);
