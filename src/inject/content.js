@@ -13,7 +13,7 @@ $('#searchResult > tbody > tr').each((index, el) => {
 		}
 	});
 
-	if (!trusted && index < numberOfTrs - 1) {
+	if (!trusted && index < numberOfTrs) {
 		$tr.hide();
 		numberOfTrsHidden++;
 	}
