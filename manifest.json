@@ -12,7 +12,8 @@
   "content_scripts": [
     {
       "matches": [
-        "https://thepiratebay.org/*"
+        "https://thepiratebay.org/browse/*",
+        "https://thepiratebay.org/search/*"
       ],
       "js": [
         "js/jquery/jquery.min.js",
