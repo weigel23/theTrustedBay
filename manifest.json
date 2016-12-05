@@ -16,7 +16,7 @@
       ],
       "js": [
         "js/jquery/jquery.min.js",
-        "src/inject/content.js"
+        "src/inject/trusted.js"
       ]
     }
   ]
